@@ -20,6 +20,6 @@
     {{ if xData }} x-on:click="{{ xData }}" {{ /if }}>
     <span>{{ linkText or 'Læs mere' }}</span>
     {{ if icon }}
-        {{ iconify:icon width="auto" height="auto" class="h-[1em] w-max" aria-hidden="true" }}
+        {{ iconify:icon class="h-[1em] w-max" }}
     {{ /if }}
 </{{ as or 'a' }}>

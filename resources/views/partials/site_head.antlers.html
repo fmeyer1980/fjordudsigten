@@ -13,8 +13,8 @@
                     <li class="{{ last ?= 'mr-[var(--logo-width)]' }}"><a class="{{ is_current || is_parent ?= 'text-primary-glare' }}" href="{{ url }}">{{ title }}</a></li>
                 {{ /nav:main_menu }}
                 <li class="absolute -translate-x-[50%] w-[var(--logo-width)] left-1/2 -translate-y-[20%] after:absolute after:top-0 after:left-1/2 after:-translate-x-[50%] after:-translate-y-[23%] after:rounded-full after:bg-light-glare after:w-[70%] after:aspect-square">
-                    <a class="grid place-items-center h-full" href="/">
-                        {{ svg src="logo" width="auto" height="auto" class="relative h-full z-10" }}
+                    <a class="grid place-items-center h-full" href="/" aria-label="Gå til {{ site_settings:site_name }}">
+                        {{ svg src="logo" class="relative h-full z-10" }}
                     </a>
                 </li>
                 {{ nav:main_menu_right }}
@@ -22,8 +22,8 @@
                 {{ /nav:main_menu_right }}
             </menu>
         </nav>
-        <a class="h-900 md:hidden " href="/">
-            {{ svg src="logo" width="auto" height="auto" class="h-full " }}
+        <a class="h-900 md:hidden " href="/" aria-label="Gå til {{ site_settings:site_name }}">
+            {{ svg src="logo" class="h-full " }}
         </a>
         <button aria-label="Primære navigation knap" type="button" class="site-head__dropdown-nav shrink-0 md:hidden relative z-[99]" :class="menuIsOpen ? 'is-open' : ''" @click="menuIsOpen = !menuIsOpen" @keydown.escape="isOpen = false"></button>
         <div class="fixed inset-0 bg-light z-[80] flex justify-center pt-800" 

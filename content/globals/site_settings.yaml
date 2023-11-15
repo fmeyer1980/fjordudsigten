@@ -8,13 +8,13 @@ data:
   socialmedia_links:
     -
       id: lolz9je6
-      handle: /
+      handle: facebook.com
       prefix: 'https://www.facebook.com/'
       type: facebook
       enabled: true
     -
       id: lolz9o4n
-      handle: /
+      handle: linkedin.com
       prefix: 'https://www.linkedin.com/'
       type: linkedin
       enabled: true
