@@ -1,0 +1,23 @@
+{{ if featured_image }}
+    {{ partial:components/picture :imagePath="featured_image" ratio="12" mdRatio="7" lgRatio="6" xlRatio="5" class="full-bleed block" }}
+{{ endif }}
+<article class="grid grid-cols-1 gap-y-900 gap-x-xl flow-space-900 {{ hide_sidebar == false ?= 'md:grid-cols-[1fr,clamp(20rem,40%,24rem)]' }} {{ featured_image == false ?= 'pt-900' }}">
+    <div class="page-content flow-y flow-space-1em">
+        {{ main_content }}
+            {{ partial src="sets/{type}" }}
+        {{ /main_content }}
+    </div>
+    {{ if hide_sidebar == false }}
+        <aside class="{{ featured_image ?= 'md:mt-[calc(-1*calc(var(--size-900)*3))]' }} ">
+            <div class="sticky top-gutter space-y-gutter">
+                <div class="relative bg-primary-glare text-light-glare py-800 px-750 rounded-tl-large rounded-br-large">
+                    <p class="h2 md:text-650 leading-flat">Fjordudsigten er snart klar til indflytning</p>
+                </div>
+                {{ partial:components/form }}
+            </div>
+        </aside>
+    {{ endif }}
+</article>
+{{ page_sections }}
+    {{ partial src="page_sections/{type}" typeClass="{type | slugify}" }}
+{{ /page_sections }}

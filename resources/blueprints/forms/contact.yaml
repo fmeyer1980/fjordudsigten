@@ -1,0 +1,49 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              placeholder: 'Angiv dit navn:'
+              antlers: false
+              type: text
+              display: Navn
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              placeholder: 'Indtast din email:'
+              antlers: false
+              type: text
+              display: Email
+              icon: text
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: message
+            field:
+              placeholder: 'Skriv din besked her:'
+              antlers: false
+              type: textarea
+              display: Beskrivelse
+              icon: textarea
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

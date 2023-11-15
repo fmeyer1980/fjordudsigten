@@ -1,0 +1,50 @@
+@font-face {
+  font-family: "Fautive";
+  src: url("/public/fonts/fautive-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceSans";
+  src: url("/public/fonts/SourceSans3-wght.woff2") format("woff2-variations");
+  font-weight: 0 700;
+  font-display: swap;
+}
+
+
+
+h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{
+  @apply font-heading tracking-wide;
+  text-wrap: balance;
+}
+
+h1,
+.h1 {
+  @apply text-900 leading-none;
+}
+
+h2,
+.h2 {
+  @apply text-800 leading-tight;
+}
+
+h3,
+.h3 {
+  @apply text-700 leading-tight;
+}
+
+h4,
+.h4 {
+  @apply text-600 leading-normal;
+}
+
+h5,
+.h5 {
+  @apply text-400 leading-normal;
+}
+
+h6,
+.h6 {
+  @apply text-300 leading-normal;
+}

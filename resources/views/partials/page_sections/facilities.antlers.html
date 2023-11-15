@@ -1,0 +1,17 @@
+<section class="full-bleed bg-light-shade py-lg">
+    <div class="container-wrapper">
+        {{ partial:components/section_heading }}
+        <ul class="auto-grid auto-grid-md gap-800">
+            {{ facilities }}
+                <li class="flow-y flow-space-075em">
+                    <div class="w-900 h-900 bg-primary-glare text-light-glare flex justify-center items-center rounded-tl-2xl rounded-br-2xl">
+                        {{ iconify:icon width="auto" height="auto" class="h-1/2 w-max" aria-hidden="true" }}
+                    </div>
+                    <p class="h6 font-semibold">{{ title }}</p>
+                    <p class="text-xs text-pretty">{{ text }}</p>
+                </li>
+            {{ /facilities }}
+        </ul>
+    </div>
+
+</section>

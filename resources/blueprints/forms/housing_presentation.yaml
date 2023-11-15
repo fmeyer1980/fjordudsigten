@@ -1,0 +1,153 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Navn
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: lastname
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Efternavn
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              antlers: false
+              type: text
+              display: Email
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: phone
+            field:
+              input_type: tel
+              antlers: false
+              type: text
+              display: Telefon
+              icon: text
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: weekday
+            field:
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Vælg ugedag'
+              icon: select
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              validate:
+                - required
+              options:
+                mandag: Mandag
+                tirsdag: Tirsdag
+                onsdag: Onsdag
+                torsdag: Torsdag
+                fredag: Fredag
+              placeholder: 'Vælg ugedag'
+          -
+            handle: time
+            field:
+              options:
+                16-17: 'Fremvisning kl. 16-17 (af hensyn til håndværkerne)'
+                custom-appointment: 'Andet tidspunkt (vi kontakter dig for nærmere aftale)'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Ønske til tidspunkt'
+              icon: select
+              width: 50
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              placeholder: 'Ønske til tidspunkt'
+          -
+            handle: house_number
+            field:
+              options:
+                1: '3-rums lejlighed, 2 plan - 30B, 1. / 34B, 1'
+                2: '3-rums lejlighed, 2 plan - 30A / 34A'
+                3: '3-rums lejlighed, 2 plan - 22C / 24C'
+                4: '4-rums lejlighed, 1 plan - 22B, 1. / 24B, 1'
+              taggable: false
+              push_tags: false
+              multiple: false
+              clearable: false
+              searchable: true
+              cast_booleans: false
+              type: select
+              display: 'Hvilken boligtype har du interesse i?'
+              icon: select
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              placeholder: 'Ingen præference'
+          -
+            handle: terms
+            field:
+              options:
+                1: 'Jeg accepterer at Fjordudsigten må bruge mine oplysninger til at kontakte mig i forbindelse med min henvendelse.'
+              inline: false
+              default: '1'
+              type: checkboxes
+              display: Terms
+              icon: checkboxes
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false

@@ -1,0 +1,13 @@
+<section class="grid grid-cols-1 md:grid-cols-2 gap-y-800 gap-x-lg items-center" aria-label="{{ text | raw | bard_items | where:type:heading | first | bard_text }}">
+    {{ partial:partials/components/image :imagePath="image" class=" w-full h-full {{ flip_content ? 'md:order-2 rounded-tl-huge rounded-br-huge fade-in-left' : 'rounded-tr-[30%] rounded-bl-[30%] fade-in-right' }}" }}
+    <div class="prose-h2:!text-700 prose-h2:max-w-[25ch] prose-p:text-primary-shade/80 page-content flow-y flow-space-1em text-pretty flex flex-col items-center text-center md:items-start md:text-left {{ flip_content ? 'fade-in-right' : 'fade-in-left' }}">
+        {{ text }}
+        {{ if links }}
+            <div class="flex gap-gutter flex-wrap flow-space-700">
+                {{ links }}
+                    {{ partial:components/btn :linkUrl="url" :linkText="text"  class="grow md:grow-0" }}
+                {{ /links }}
+            </div>
+        {{ endif }}
+    </div>
+</section>

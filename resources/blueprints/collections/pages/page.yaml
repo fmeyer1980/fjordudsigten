@@ -1,0 +1,83 @@
+title: Page
+tabs:
+  main:
+    display: 'Page header'
+    sections:
+      -
+        fields:
+          -
+            handle: featured_image
+            field:
+              max_files: 1
+              mode: list
+              container: assets
+              restrict: false
+              allow_uploads: true
+              show_filename: true
+              show_set_alt: true
+              type: assets
+              display: 'Featured image'
+              icon: assets
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+          -
+            handle: flip_image
+            field:
+              default: false
+              type: toggle
+              display: 'Flip image'
+              icon: toggle
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
+              if:
+                featured_image: 'not empty'
+          -
+            import: main_content
+  page_section:
+    display: 'Page section'
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: page_sections
+  seo:
+    display: Seo
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            import: meta
+            prefix: meta_
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              validate:
+                - required
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - pages
+              max_items: 1
+              listable: false
+              localizable: true

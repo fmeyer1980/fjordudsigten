@@ -1,0 +1,18 @@
+{{ width = switch(
+    (container_width == 'full-bleed') => "full-bleed",
+    (container_width == 'pl-container') => "full-bleed pl-container border-l-gutter border-transparent",
+    (container_width == 'pr-container') => "full-bleed pr-container border-r-gutter border-transparent",
+    () => ""
+)}}
+
+<div class="{{ width }}">
+    <div class="image-overlay aspect-[3/2] md:aspect-[16/8]">
+        {{ if media_type == 'image' }}
+            {{ partial:components/picture :imagePath="image" class="absolute inset-0 w-full h-full object-cover" }}
+        {{ else }}
+        <video class=" absolute inset-0 w-full h-full object-cover" muted="muted" loop="loop" autoplay preload="auto" class="imagebox__video">
+            <source src="{{ video }}" type="video/mp4">
+        </video>
+        {{ /if }}
+    </div>
+</div>

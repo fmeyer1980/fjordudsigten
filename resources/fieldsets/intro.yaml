@@ -1,0 +1,186 @@
+title: Intro
+fields:
+  -
+    handle: text
+    field:
+      buttons:
+        - h1
+        - bold
+        - italic
+        - removeformat
+        - anchor
+        - title
+        - brand_color
+        - large_text
+      smart_typography: true
+      save_html: false
+      inline: false
+      toolbar_mode: floating
+      reading_time: false
+      word_count: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      remove_empty_nodes: false
+      antlers: false
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      always_show_set_button: false
+      collapse: false
+      previews: true
+      type: bard
+      display: Text
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+  -
+    handle: links
+    field: links.links
+    config:
+      fields:
+        -
+          handle: show_video_popup
+          field:
+            default: false
+            type: toggle
+            display: 'Show video popup'
+            icon: toggle
+            width: 25
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: url
+          field:
+            collections:
+              - pages
+            container: assets
+            display: Url
+            type: link
+            icon: link
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+            width: 25
+            replicator_preview: true
+            hide_display: false
+            if:
+              show_video_popup: 'equals false'
+        -
+          handle: text
+          field:
+            input_type: text
+            antlers: false
+            display: Text
+            type: text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            always_save: false
+            width: 25
+        -
+          handle: icon
+          field:
+            store_as: svg_data
+            type: iconify
+            display: Icon
+            icon: iconify
+            width: 25
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: show_settings
+          field:
+            mode: button
+            display: 'Show settings'
+            type: revealer
+            icon: revealer
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+        -
+          handle: link_type
+          field:
+            options:
+              default: default
+              solid: Solid
+              stroke: Stroke
+            default: default
+            display: 'Link type'
+            type: button_group
+            icon: button_group
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            width: 33
+            hide_display: false
+            if:
+              show_settings: 'equals true'
+        -
+          handle: color
+          field: common_fields.color
+          config:
+            width: 33
+            if:
+              show_settings: 'equals true'
+        -
+          handle: flip_content
+          field:
+            default: false
+            type: toggle
+            display: 'Flip content'
+            icon: toggle
+            width: 33
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            hide_display: false
+            if:
+              show_settings: 'equals true'
+  -
+    handle: media
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: Media
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: popup_video
+    field:
+      max_files: 1
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Popup video'
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -1,0 +1,10 @@
+<div class="full-bleed overflow-x-hidden {{ section_space }} ">
+    <div class="flex gap-100 {{ scroll == "left" ? 'animate-move-left' : 'animate-move-right' }} [animation-timeline:scroll(block_root)] [animation-duration:auto]">
+        {{ images }}
+            <div class="aspect-square w-1/4 shrink-0 rounded-tr-[30%] rounded-bl-[30%] overflow-hidden">
+                {{ partial:components/image :imagePath="url" w="300" h="300" lazy="true" class="w-full" }}
+            </div>
+            <div class="aspect-square w-1/4 shrink-0 rounded-tl-[30%] rounded-br-[30%] {{ switch between='bg-primary | bg-primary-glare | bg-light-shade' }}"></div>
+        {{ /images }}    
+    </div>
+</div>

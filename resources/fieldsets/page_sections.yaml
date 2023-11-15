@@ -1,0 +1,67 @@
+title: 'Page sections'
+fields:
+  -
+    handle: page_sections
+    field:
+      collapse: accordion
+      previews: true
+      fullscreen: true
+      sets:
+        sections:
+          display: Sections
+          instructions: null
+          icon: layout-flip-up
+          sets:
+            image:
+              display: Image
+              instructions: null
+              icon: media-image-picture-gallery
+              fields: {  }
+            video:
+              display: Video
+              instructions: null
+              icon: media-webcam-video
+              fields: {  }
+            image_textbox:
+              display: 'Image textbox'
+              instructions: null
+              icon: text-formatting-wrap-image-margin-left
+              fields:
+                -
+                  import: image_textbox
+            gallery_scroller:
+              display: 'Gallery scroller'
+              instructions: null
+              icon: media-image-picture-gallery
+              fields:
+                -
+                  import: gallery_scroller
+            text_section:
+              display: 'Text section'
+              instructions: null
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: text_section
+            cta:
+              display: 'Call to action'
+              instructions: null
+              icon: align-object-center
+              fields:
+                -
+                  import: cta
+            facilities:
+              display: Facilities
+              instructions: null
+              icon: download-arrow-down
+              fields:
+                -
+                  import: facilities
+      type: replicator
+      display: 'Page sections'
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      hide_display: false
+      replicator_preview: true

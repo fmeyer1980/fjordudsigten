@@ -1,0 +1,73 @@
+title: Facilities
+fields:
+  -
+    handle: section_heading
+    field: common_fields.section_heading
+    config:
+      buttons:
+        - h2
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - alignleft
+        - aligncenter
+        - alignright
+        - title
+        - brand_color
+        - large_text
+  -
+    handle: facilities
+    field:
+      fields:
+        -
+          handle: icon
+          field:
+            store_as: svg_data
+            type: iconify
+            display: Icon
+            icon: iconify
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: title
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Title
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+        -
+          handle: text
+          field:
+            input_type: text
+            antlers: false
+            type: text
+            display: Text
+            icon: text
+            listable: hidden
+            instructions_position: above
+            visibility: visible
+            replicator_preview: true
+            hide_display: false
+      mode: table
+      add_row: 'Add facilitie'
+      reorderable: true
+      fullscreen: true
+      type: grid
+      display: Facilities
+      icon: grid
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false

@@ -1,0 +1,42 @@
+<section class="relative grid grid-cols-1 md:grid-cols-[1.2fr,1fr] gap-lg items-center mt-lg text-center md:text-left" aria-label="{{ intro_text | raw | bard_items | where:type:heading | first | bard_text }}">
+    <div class="@container animaa shrink-0 relative z-10 prose-h1:text-[10.5cqi] prose-h1:max-w-[25ch] prose-p:max-w-[55ch] prose-p:text-primary-shade/80 prose-p:text-350 flow-y flow-space-600 flex flex-col items-center md:items-start md:order-2">
+        {{ intro_text }}
+        <div class="flex gap-100 flex-wrap flow-space-700">
+            {{ intro_links }}
+                {{ typee = switch(
+                    (show_video_popup == true) => "button",
+                    () => "a"
+                )}}
+                {{ partial:components/btn :as="typee" :linkUrl="url" :linkText="text" xData="popup = true, $nextTick(() => $refs.popupCloseButton.focus())" }}
+            {{ /intro_links }}
+        </div>
+    </div>
+    
+    {{ if intro_media }}
+        <div class="relative aspect-square sm:aspect-auto anima sm:min-h-[28rem] lg:aspect-square h-full mr-gutter md:mr-0 after:w-[38%] after:h-[38%] after:bg-primary-glare after:absolute after:-right-gutter after:-bottom-gutter after:z-10 after:rounded-tl-large after:rounded-br-large after:animate-scale">
+            <video loop="loop" muted loop="loop" preload="auto" playsinline autoplay class="relative rounded-tr-[var(--size-xl)] rounded-bl-[var(--size-xl)] w-full h-full object-cover"><source src="{{ intro_media }}" type="video/mp4"></video>
+        </div>
+    {{ endif }}
+    
+    <template x-teleport="body">
+        <div
+            x-cloak
+            x-show="popup"
+            @keyup.escape="popup = false" 
+            class="popup fixed inset-0 bg-dark-shade/90 backdrop-blur-md z-[99] flex justify-center items-center"
+            x-cloak
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+        >
+            <div class="relative p-1.5 bg-light-glare w-[90%] max-w-[var(--container-width)] rounded-md" x-on:click.outside="popup = false">
+                <button class="absolute top-400 right-400 z-10 w-700 h-700 bg-dark-shade text-light-glare flex items-center rounded-[3px] justify-center focus:border focus:border-light-glare" x-ref="popupCloseButton" x-on:click="popup = false">{{ svg src="close" class="h-[40%]" }}</button>
+                <video x-ref="video" loop="loop" muted loop="loop" preload="auto" playsinline autoplay controls class="w-full h-full object-cover"><source src="{{ intro_popup_video }}" type="video/mp4"></video>
+            </div>
+        </div>
+    </template>
+</section>
+

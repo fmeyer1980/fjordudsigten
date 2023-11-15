@@ -1,0 +1,25 @@
+title: 'Site settings'
+data:
+  site_name: 'Fjordudsigten Ringkobing'
+  phone: '97 32 17 11'
+  email: info@rsbolig.dk
+  address: 'Kongevejen 46'
+  zip: '6950 Ringkøbing'
+  socialmedia_links:
+    -
+      id: lolz9je6
+      handle: /
+      prefix: 'https://www.facebook.com/'
+      type: facebook
+      enabled: true
+    -
+      id: lolz9o4n
+      handle: /
+      prefix: 'https://www.linkedin.com/'
+      type: linkedin
+      enabled: true
+  opening_hours:
+    - 'Mandag kl. 10.00 - 17.00'
+    - 'Tirsdag - torsdag kl. 10.00 - 13.00'
+    - 'Fredag kl. 9.00 - 12.00'
+  contact_thanks_page_redirect: 'entry::b6926fad-7b02-439f-88ab-3a462e135e8e'
