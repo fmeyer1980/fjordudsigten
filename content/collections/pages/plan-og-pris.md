@@ -3,7 +3,7 @@ id: 4fdf33b5-6a0a-4f77-9635-af228e13de24
 blueprint: page
 title: 'Plan og pris'
 updated_by: 1d74e355-91e0-4241-87b0-b93320ef7c5f
-updated_at: 1699382122
+updated_at: 1704372045
 featured_image: ringkobing-k-august-20-06da497a609030674d57e2b059ad3427_photos_v2_faces_x2.jpg
 main_content:
   -
@@ -2337,5 +2337,11 @@ page_sections:
         color: light
         flip_content: false
     type: cta
+    enabled: false
+  -
+    id: lqz73ter
+    reusable_sections: ef92ee60-47dc-42cc-9bc4-b4011fc696b0
+    type: reusable_sections
     enabled: true
+hide_sidebar: false
 ---

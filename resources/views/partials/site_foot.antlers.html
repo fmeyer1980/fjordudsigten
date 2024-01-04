@@ -1,5 +1,5 @@
 <footer class="text-center md:text-left">
-    <div class="container-wrapper py-lg {{ page_sections }} {{ page_sections | last }} {{ type == "cta" ?= 'md:mx-xxl' }} {{ /page_sections | last }} {{ /page_sections }} flex flex-col md:flex-row justify-between gap-900 [&_li]:pb-1 [&_li]:opacity-80">
+    <div class="container-wrapper py-lg {{ page_sections }} {{ page_sections | last }} {{ type == "cta" || type == "reusable_sections" ?= 'md:mx-xxl' }} {{ /page_sections | last }} {{ /page_sections }} flex flex-col md:flex-row justify-between gap-900 [&_li]:pb-1 [&_li]:opacity-80">
         <div>
             <p class="h5 mb-200">RS Bolig</p>
             <ul>

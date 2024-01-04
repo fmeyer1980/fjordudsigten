@@ -30,8 +30,10 @@ fields:
       listable: hidden
       instructions_position: above
       visibility: visible
-      replicator_preview: true
+      replicator_preview: false
       hide_display: false
   -
     handle: section_space
     field: common_fields.section_space
+    config:
+      replicator_preview: false

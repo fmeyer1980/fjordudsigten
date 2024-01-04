@@ -57,6 +57,27 @@ fields:
               fields:
                 -
                   import: facilities
+            reusable_sections:
+              display: 'Reusable sections'
+              instructions: null
+              icon: addon-boxes-stack
+              fields:
+                -
+                  handle: reusable_sections
+                  field:
+                    mode: default
+                    create: true
+                    collections:
+                      - reusable_sections
+                    type: entries
+                    display: 'Reusable sections'
+                    icon: entries
+                    listable: hidden
+                    instructions_position: above
+                    visibility: visible
+                    replicator_preview: true
+                    hide_display: false
+                    max_items: 1
       type: replicator
       display: 'Page sections'
       icon: replicator

@@ -203,12 +203,12 @@ main :where(a:not([class])){
   @keyframes fade-in-right {
     from{
         opacity: 0;
-        transform: translate(-10%, 0%);
+        transform: translateX(-10%);
           
       }
       to{
         opacity: 100;
-        transform: translate(0%, 0%);
+        transform: translateX(0%);
       }
   }
 
@@ -231,12 +231,12 @@ main :where(a:not([class])){
 
 .fade-in-left{
     animation: fade-in-left .4s cubic-bezier(1,0,1,1);
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
     animation-timeline: view(90% auto);
 }
 
 .fade-in-right{
     animation: fade-in-right .4s cubic-bezier(1,0,1,1);
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
     animation-timeline: view(90% auto);
 }

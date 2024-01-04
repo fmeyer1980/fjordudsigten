@@ -5,7 +5,7 @@ title: Home
 template: home
 author: 1d74e355-91e0-4241-87b0-b93320ef7c5f
 updated_by: 1d74e355-91e0-4241-87b0-b93320ef7c5f
-updated_at: 1700058983
+updated_at: 1704371174
 intro_text:
   -
     type: heading
@@ -23,36 +23,6 @@ intro_text:
       -
         type: text
         text: 'Er du på udkig efter en spritny lejlighed – midt i naturen og med udsigt over fjorden; og i gåafstand til vuggestue, børnehave, skole, indkøb og fritidsfaciliteter? Her er et fantastisk'
-intro_links:
-  -
-    id: loiul7sv
-    url: 'entry::home'
-    text: 'Book en fremvisning'
-    link_type: solid
-    color: dark
-    flip_content: false
-    icon:
-      name: 'teenyicons:arrow-right-outline'
-      attributes:
-        width: 1em
-        height: 1em
-        viewBox: '0 0 15 15'
-      body: '<path fill="none" stroke="currentColor" d="m13.5 7.5l-4-4m4 4l-4 4m4-4H1"/>'
-    show_video_popup: false
-  -
-    id: lovhhb4j
-    show_video_popup: true
-    text: 'Se vores video'
-    icon:
-      name: 'octicon:play-16'
-      attributes:
-        width: 1em
-        height: 1em
-        viewBox: '0 0 16 16'
-      body: '<path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0a6.5 6.5 0 0 0-13 0Zm4.879-2.773l4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215Z"/>'
-    link_type: stroke
-    color: dark
-    flip_content: true
 page_sections:
   -
     id: lom1hq0n
@@ -246,5 +216,33 @@ meta_title: 'Bo tæt på naturen og vandet'
 meta_description: 'Er du på udkig efter en spritny lejlighed – midt i naturen og med udsigt over fjorden; og i gåafstand til vuggestue, børnehave, skole'
 meta_image: camilladennis_johanella_lille_fil_22-19d1a8ee7b7f899776beb3a6b2f3b4a5.webp
 intro_media: video/intro-video.mp4
-intro_popup_video: video/intro-video.mp4
+intro_links:
+  -
+    id: lqz62j84
+    url: 'entry::00cba3fe-92a5-4e79-a941-e7033bf957b9'
+    link_type: solid
+    color: dark
+    flip_content: true
+    text: 'Book en fremvisning'
+    icon:
+      name: 'majesticons:arrow-right'
+      attributes:
+        width: 1em
+        height: 1em
+        viewBox: '0 0 24 24'
+      body: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 12l-6-6m6 6l-6 6m6-6H5"/>'
+  -
+    id: lqz687gd
+    url: 'asset::assets::video/intro-video.mp4'
+    text: 'Se vores video'
+    icon:
+      name: 'octicon:play-16'
+      attributes:
+        width: 1em
+        height: 1em
+        viewBox: '0 0 16 16'
+      body: '<path fill="currentColor" d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M1.5 8a6.5 6.5 0 1 0 13 0a6.5 6.5 0 0 0-13 0m4.879-2.773l4.264 2.559a.25.25 0 0 1 0 .428l-4.264 2.559A.25.25 0 0 1 6 10.559V5.442a.25.25 0 0 1 .379-.215"/>'
+    link_type: stroke
+    color: dark
+    flip_content: true
 ---

@@ -3,7 +3,7 @@ id: 18787ae3-0087-4e56-93cf-1be340253076
 blueprint: page
 title: Området
 updated_by: 1d74e355-91e0-4241-87b0-b93320ef7c5f
-updated_at: 1699823077
+updated_at: 1704372088
 main_content:
   -
     type: heading
@@ -1360,6 +1360,11 @@ page_sections:
     image: 20180901_115650713_ios-1-945af16c15d1b5b37b45798ac043ad70.webp
     flip_content: true
     type: image_textbox
+    enabled: true
+  -
+    id: lqz74thd
+    reusable_sections: ef92ee60-47dc-42cc-9bc4-b4011fc696b0
+    type: reusable_sections
     enabled: true
 hide_sidebar: false
 ---
